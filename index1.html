@@ -6,32 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tarea1</title>
+    <meta name="description" content="Portafolio personal sobre fullstack de sebastian yabiku">
+    <meta name="author" content="Juan Carlos Vidal" />
+    <meta name="keywords" content="frontend, developer, design, fullstack" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="JUAN CARLOS VIDAL" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jcsurfer.github.io/tarea1/" />
+    <meta property="og:title" content="My portafolio - Sebastian Yabiku" />
+    <meta property="og:description" content="Portafolio personal sobre fullstack de Juan Carlos Vidal" />
+    <meta property="og:image" content="https://picsum.photos/216/216" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@juancarlosvidal" />
+    <meta name="twitter:creator" content="@juancarlosvidal" />
+    <meta name="twitter:domain" content="https://sebastian-yabiku.github.io/project2/" />
+    <meta name="twitter:title" content="My portafolio - Juan Carlos Vidal" />
+    <meta name="twitter:description" content="Portafolio personal sobre fullstack de Juan Carlos Vidal" />
+    <meta name="twitter:image" content="https://picsum.photos/216/216" />
     <script src="https://kit.fontawesome.com/985a8e1d51.js"></script>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script>window.twttr = (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function (f) {
+            t._e.push(f);
+        };
+        return t;
+    }(document, "script", "twitter-wjs"));</script>
 </head>
 
 <body>
     <div>
+            <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
+                </script>
         <!-- HEADER -->
         <header>
             <div class="container">
                 <h1 class="logo"><a>&lt;Juan Carlos Vidal /&gt;</a></h1>
+               <div>
+                   <ul class="social">
+                       <li>
+                            <a class="twitter twitter-share-button" href="https://twitter.com/intent/tweet"
+                            data-size="small"
+                            data-text="Gracias por compartir mi pagina "
+                            data-url="https://twitter.com/sebastianyabiku"
+                            data-hashtags="frontend, fullstack, design"
+                            data-via="Juan Carlos Vidal"
+                            data-related="twitterapi,twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                       </li>
+                       <li>
+                            <div class="fb-share-button" data-href="https://jcsurfer.github.io/tarea1/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjcsurfer.github.io%2Ftarea1%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                       </li>
+                   </ul>
                 <nav>
                     <ul>
-                        <li><a href="">Sobre mi </a></li>
-                        <li><a href="">Portafolio</a></li>
-                        <li><a href="">Mis Habilidades</a></li>
-                        <li><a href="">Contactame</a></li>
+                        <li><a href="#about-me">Sobre mi </a></li>
+                        <li><a href="#portfolio">Portafolio</a></li>
+                        <li><a href="#skills">Mis Habilidades</a></li>
+                        <li><a href="#contact">Contactame</a></li>
                     </ul>
                 </nav>
+                </div>
+                <i class="js_menu menu fas fa-bars"></i>
             </div>
         </header>
         <!-- MAIN -->
         <main>
             <div class="container">
                 <!-- SECTION SOBRE MI -->
-                <section class="about-me">
+                <section class="about-me" id="about-me">
                     <h2>Sobre Mi</h2>
                     <div class="text">
                         <figure>
@@ -70,7 +127,7 @@
                     </div>
                 </section>
                 <!-- SECTION PORTAFOLIO -->
-                <section class="portfolio">
+                <section class="portfolio" id="portfolio">
                     <h2>Portafolio</h2>
                     <div class="articles">
                         <article>
@@ -214,7 +271,7 @@
                     </div>
                 </section>
                 <!-- SECTION MIS HABILIDADES -->
-                <section class="skills">
+                <section class="skills" id="skills">
                 <h2>Mis Habilidades</h2>    
                     <div class="wrap-skills">
                         <div class="skill">
@@ -310,7 +367,7 @@
                     </div>
                 </section>
                 <!-- SECTION CONTACTAME -->
-                <section class="contact">
+                <section class="contact" id="contact">
                     <div class="form">
                         <h2>Contactame</h2>
                         <form class="wrap-form">
@@ -368,6 +425,13 @@
             </div>
         </footer>
     </div>
+    <script>
+            const button = document.querySelector('.js_menu');
+            const body = document.querySelector('body');
+            button.addEventListener('click', function () {
+                body.classList.toggle('show-menu');
+            })
+        </script>
 </body>
 
 </html>
